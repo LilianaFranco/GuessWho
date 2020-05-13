@@ -6,65 +6,88 @@
 
   <title>Guess Who</title>
   <meta name="Guess Who Game" content="Welcome to Guess Who">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 </head>
 
 <body>
 
-<div>
-	<button id="newGame" type="button">New Game</button>
-</div>
+<div class="content">
 
-<div>
-	<section>
-		<span>Hello, </span><span id="name">name</span>!
-		<span>Total Games: </span><span id="numberGames">0</span>
-		<span></span>Win Games: <span id="name">0</span>
-		<span>Lost Games: </span><span id="name">0</span>
+	<header>
+		<h1>Guess Who?</h1>
+		<img src="images/GuessWho.png">
+	</header>
+
+	<div>
+		<button id="newGame" type="button">New Game</button>
+	</div>
+
+	<div id="game-summary">
+		
+		<section class="section-game">
+			<span>Hello, </span><span id="name"> name</span>!
+		</section>
+
+		<section class="section-game"></section>
+			<span>Total Games: </span><span id="numberGames">0</span>
+		</section>
+
+		<section class="section-game"></section>
+			<span></span>Win Games: <span id="name">0</span>
+		</section>
+
+		<section class="section-game"></section>
+			<span>Lost Games: </span><span id="name">0</span>
+		</section>
+		
+	</div>
+
+	<div>
+		<section id="optionsQuestions" class="section-game">
+			<span>Type of Feature</span>
+			<span>Feature</span>
+			<button class="regular-button">Ask!</button>
+		</section>
+
+		<section id="optionsAnswer" class="section-game">
+			<span id="right">Right Answer</span>
+			<span id="wrong">Wrong Answer</span>
+		</section>
+	</div>
+
+	<section class="section-game">
+		<table id="cahracters">
+			<tr>
+			<td>character 1</td>
+			<td>character 2</td>
+			<td>character 3</td>
+		</tr>
+		<tr>
+			<td>character 4</td>
+			<td>character 5</td>
+			<td>character 6</td>
+		</tr>
+		<tr>
+			<td>character 7</td>
+			<td>character 8</td>
+			<td>character 9</td>
+		</table>
 	</section>
-</div>
 
-<div>
-	<section id="optionsQuestions">
-		<span>Type of Feature</span>
+	<section class="section-game">
+		<button class="main-button">Guess</button>	
+		<button class="main-button">End Game</button>
+	</section>
+
+	<section class="section-game">
 		<span>Feature</span>
-		<button>Ask!</button>
+		<button class="regular-button">Try!</button>
+		<span>Answer</span>
+		<span>Message</span>
+		<button>Close</button>
 	</section>
-
-	<section id="optionsAnswer">
-		<span id="right">Right Answer</span>
-		<span id="wrong">Wrong Answer</span>
-	</section>
-</div>
-
-<table id="cahracters">
-	<tr>
-    <td>character 1</td>
-    <td>character 2</td>
-    <td>character 3</td>
-  </tr>
-  <tr>
-    <td>character 4</td>
-    <td>character 5</td>
-    <td>character 6</td>
-  </tr>
-  <tr>
-    <td>character 7</td>
-    <td>character 8</td>
-    <td>character 9</td>
-</table>
-
-<div>
-	<button>Guess</button>	
-	<button>End Game</button>
-</div>
-
-<div>
-	<span>Feature</span>
-	<button>Try!</button>
-	<span>Answer</span>
-	<span>Message</span>
-	<button>Close</button>
 </div>
 
 <script src="./index.js"></script>
