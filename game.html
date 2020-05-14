@@ -20,45 +20,47 @@
 		<img src="images/GuessWho.png">
 	</header>
 
-	<div>
-		<button id="newGame" type="button">New Game</button>
+	<div id="instructions">
+		<h2>Hello,</h2>
+		<h2>Name</h2>
+		<button id="change-player" class="regular-button">Change player</button>
 	</div>
 
 	<div id="game-summary">
-		
-		<section class="section-game">
-			<span>Hello, </span><span id="name"> name</span>!
-		</section>
+			<table id="cahracters">
+				<tr>
+					<td>Total games:</td>
+					<td>0</td>
+				</tr>
+			
+				<tr>
+					<td>Win games:</td>
+					<td>0</td>
+				</tr>
 
-		<section class="section-game"></section>
-			<span>Total Games: </span><span id="numberGames">0</span>
-		</section>
+				<tr>
+					<td>Lost games:</td>
+					<td>0</td>
+				</tr>
+			</table>
+	</div>
 
-		<section class="section-game"></section>
-			<span></span>Win Games: <span id="name">0</span>
-		</section>
+	<div class="row">
+		<div id="questions" class="column">
+				<div>Type of Feature</div>
+				<div>Feature</div>
+				<button class="regular-button">Ask!</button>
+		</div>
 
-		<section class="section-game"></section>
-			<span>Lost Games: </span><span id="name">0</span>
-		</section>
-		
+		<div id="answers" class="column">
+			<section id="optionsAnswer">
+				<span id="right">Answer</span>
+			</section>
+		</div>
 	</div>
 
 	<div>
-		<section id="optionsQuestions" class="section-game">
-			<span>Type of Feature</span>
-			<span>Feature</span>
-			<button class="regular-button">Ask!</button>
-		</section>
-
-		<section id="optionsAnswer" class="section-game">
-			<span id="right">Right Answer</span>
-			<span id="wrong">Wrong Answer</span>
-		</section>
-	</div>
-
-	<section class="section-game">
-		<table id="cahracters">
+		<table id="characters">
 			<tr>
 			<td>character 1</td>
 			<td>character 2</td>
@@ -74,14 +76,14 @@
 			<td>character 8</td>
 			<td>character 9</td>
 		</table>
-	</section>
+	</div>
 
-	<section class="section-game">
+	<section id="game-actions">
 		<button class="main-button">Guess</button>	
 		<button class="main-button">End Game</button>
 	</section>
 
-	<section class="section-game">
+	<section id="modal-to-guess">
 		<span>Feature</span>
 		<button class="regular-button">Try!</button>
 		<span>Answer</span>
