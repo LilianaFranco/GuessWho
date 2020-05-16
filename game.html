@@ -8,59 +8,53 @@
   <meta name="Guess Who Game" content="Welcome to Guess Who">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-
 </head>
 
 <body>
 
-<div class="content">
+<div class="content-game">
 
-	<header>
-		<h1>Guess Who?</h1>
-		<img src="images/GuessWho.png">
-	</header>
+	<div class="item-header">
+		<header >
+			<h1>Guess Who?</h1>
+			<img src="images/GuessWho.png">
+		</header>
+	</div>
 
-	<div id="instructions">
+	<div class="item-welcome" id="welcome">
 		<h2>Hello,</h2>
 		<h2>Name</h2>
 		<button id="change-player" class="regular-button">Change player</button>
 	</div>
 
-	<div id="game-summary">
-			<table id="cahracters">
-				<tr>
-					<td>Total games:</td>
-					<td>0</td>
-				</tr>
-			
-				<tr>
-					<td>Win games:</td>
-					<td>0</td>
-				</tr>
-
-				<tr>
-					<td>Lost games:</td>
-					<td>0</td>
-				</tr>
-			</table>
+	<div class="item-game-summary" id="center-aligned">
+		<div>
+			<span>Total games:</span>
+			<span>0</span>
+		</div>
+		<div>
+			<span>Win games:</span>
+			<span>0</span>	
+		</div>
+		<div>
+			<span>Lost games:</span>
+			<span>0</span>	
+		</div>	
 	</div>
 
-	<div class="row">
-		<div id="questions" class="column">
-				<div>Type of Feature</div>
-				<div>Feature</div>
-				<button class="regular-button">Ask!</button>
-		</div>
-
-		<div id="answers" class="column">
-			<section id="optionsAnswer">
-				<span id="right">Answer</span>
-			</section>
-		</div>
+	<div class="item-questions" id="center-aligned">
+		<div id="dropdown">Type of Feature</div>
+		<div id="dropdown">Feature</div>
+		<button class="regular-button">Ask!</button>
 	</div>
 
-	<div>
-		<table id="characters">
+	<div class="item-answers">
+		<span id="center-aligned">Answer</span>
+		</section>
+	</div>
+
+	<div class="item-characters">
+		<table>
 			<tr>
 			<td>character 1</td>
 			<td>character 2</td>
@@ -78,18 +72,22 @@
 		</table>
 	</div>
 
-	<section id="game-actions">
-		<button class="main-button">Guess</button>	
+	<div class="item-actions-game">
+		<button class="main-button" id="guess">Guess</button>	
 		<button class="main-button">End Game</button>
-	</section>
+	</div>
 
-	<section id="modal-to-guess">
-		<span>Feature</span>
-		<button class="regular-button">Try!</button>
-		<span>Answer</span>
-		<span>Message</span>
-		<button>Close</button>
-	</section>
+	<div class= "modal" id="modal">
+		<div class="close" id="close">x</div>
+		<div class="modal-content">
+			<span>Feature</span>
+			<button class="regular-button">Try!</button>
+			<span>Answer</span>
+			<span>Message</span>	
+		</div>
+		
+	</div>
+
 </div>
 
 <script src="./index.js"></script>

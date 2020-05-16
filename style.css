@@ -1,76 +1,40 @@
-
-/* General styles*/ 
-.content {
-  max-width: 960px;
-  margin: auto;
-  font-family: 'Roboto', sans-serif;
-}
-
 body {
-	background-color:#F2F2F2;
-}
-
-header {
-	background-color:#3747A6;
-  border-radius: 20px;
-  height: 140px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.main-button {
-  background-color:#3747A6;
-  border: none;
-  color: white;
-  padding: 10px 32px;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-}
-
-.regular-button {
-  background-color:#F25050;
-  border: none;
-  color: white;
-  padding: 5px 20px;
-  border-radius: 5px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-}
-
-h1 {
-  font-size: 50px;
-  color: white;
-}
-
-h2 {
-  margin-left: 10px;
+  background-color:#F2F2F2;
+  font-family: 'Roboto', sans-serif;
+  max-width: 960px;
 }
 
 /* Styles for the index*/ 
 img {
   width: 120px;
-  position: relative;
-  float:right;
-
 }
 
-.info {
-  background-color:white;
-  height: 200px;
-	padding: 25px;
-  border-radius: 20px;
+.item-form {
+  grid-area: form;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px 5px 10px 5px;
+  padding: 10px;
+}
+
+#player-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-index {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "header header" 
+    "form form";
 }
 
 .section-index {
-  padding: 10px;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -85,62 +49,161 @@ input {
   border-bottom: 1px solid #3747A6;
 }
 
-/* Styles for the game*/ 
+/* Styles for the game grid*/ 
 
-#instructions {
-  background-color:white;
-	padding: 25px;
-  border-radius: 20px;
-  margin-bottom: 20px;
+.item-header {
+  grid-area: header;
+  background-color: #3747A6;
+  border-radius: 10px;
+  margin: 10px 5px 10px 5px;
+  padding: 10px;
+}
+
+header {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.item-welcome {
+  grid-area: welcome;
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+}
+
+#welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-game-summary {
+  grid-area: summary;
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#center-aligned {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.item-questions {
+  grid-area: questions;
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#dropdown {
+  margin: 5px;
+}
+
+.item-answers {
+  grid-area: answers;
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.item-characters {
+  grid-area: characters;
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.item-actions-game {
+  grid-area: actions;
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
   justify-content: space-evenly;
 }
 
-#change-player {
-  margin-left: auto;
+.content-game {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows:  auto auto auto auto auto;
+  grid-template-areas: 
+    "header header header" 
+    "welcome summary summary"
+    "questions answers answers"
+    "characters characters characters"
+    "actions actions actions";
+}
+
+.main-button {
+  background-color:#4E5BA6;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  align-self: center;
+  font-size: 16px;
+}
+
+.regular-button {
+  background-color:#F25050;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-align: center;
+  align-self: center;
+  font-size: 16px;
 }
 
 table {
-  background-color:white;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 20px;
   display: flex;
   justify-content: center;
-} 
+}
 
-#questions {
-  background-color:white;
-	padding: 25px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  margin-right: 10px;
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.modal{
+  position: fixed;
+  top:0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  z-index: 5;
+  width: 500px;
+  height: 300px;
+  margin: auto auto;
+  background:  #4E5BA6;
+  border-color: #F25050;
+  border-style: solid;
+  border-radius: 5px;
+  display: none;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
-#answers {
-  background-color:white;
-  border-radius: 20px;
-  text-align: center;
-  margin-bottom: 20px;
 
-}
-.row{
-  display: flex;
-  width: 100%
-}
-
-.column{
-  flex: 1;
-  padding: 16px; 
-}
-
-#game-actions {
-  background-color:white;
-	padding: 25px;
-  border-radius: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-evenly;
+.close{
+  margin: 20px;
+  color: white;
+  text-align: right;
 }
