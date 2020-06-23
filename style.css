@@ -2,56 +2,10 @@ body {
   background-color:#F2F2F2;
   font-family: 'Roboto', sans-serif;
   max-width: 960px;
+  margin: auto;
 }
 
-/* Styles for the index*/ 
-img {
-  width: 120px;
-}
-
-.item-form {
-  grid-area: form;
-  background-color: white;
-  border-radius: 10px;
-  margin: 10px 5px 10px 5px;
-  padding: 10px;
-}
-
-#player-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.content-index {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto auto;
-  grid-template-areas: 
-    "header header" 
-    "form form";
-}
-
-.section-index {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-label {
-  padding-right: 10px;
-}
-
-input {
-  border: none;
-  border-bottom: 1px solid #3747A6;
-}
-
-/* Styles for the game grid*/ 
-
-.item-header {
+header {
   grid-area: header;
   background-color: #3747A6;
   border-radius: 10px;
@@ -63,86 +17,127 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  grid-column: span 3;
 }
 
-.item-welcome {
-  grid-area: welcome;
+img {
+  width: 120px;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.index-page {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 320px 320px 320px;
+  grid-template-areas: 
+    "header header header" 
+    "main main main";
+  justify-content: center;
+}
+
+.main-page {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.game-page {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 320px 320px 320px;
+  grid-template-areas: 
+    "header header header" 
+    "game game game";
+  justify-content: center;
+  display: none;
+
+}
+.game {
+  display: grid;
+  grid-area: game;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+
+}.cell {
   background-color: white;
   border-radius: 10px;
-  margin: 5px;
+  margin: 10px 5px 10px 5px;
   padding: 10px;
 }
 
-#welcome {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.item-game-summary {
-  grid-area: summary;
-  background-color: white;
-  margin: 5px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-#center-aligned {
+#player-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  grid-column: span 3;
+ }
+
+label {
+  padding-right: 10px;
 }
 
-.item-questions {
-  grid-area: questions;
-  background-color: white;
-  margin: 5px;
+input {
+  border: none;
+  border-bottom: 1px solid #3747A6;
+  margin: 10px;
+}
+
+.item-welcome {
   border-radius: 10px;
+  margin: 20px;
   padding: 10px;
+  grid-column: span 3;
 }
 
-#dropdown {
-  margin: 5px;
-}
-
-.item-answers {
-  grid-area: answers;
-  background-color: white;
-  margin: 5px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.item-characters {
-  grid-area: characters;
-  background-color: white;
-  margin: 5px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.item-actions-game {
-  grid-area: actions;
-  background-color: white;
-  margin: 5px;
-  border-radius: 10px;
-  padding: 10px;
+#welcome {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: span 2;
 }
 
-.content-game {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 50% 25% 25%;
-  grid-template-rows:  auto auto auto auto auto;
-  grid-template-areas: 
-    "header header header" 
-    "welcome summary summary"
-    "questions answers answers"
-    "characters characters characters"
-    "actions actions actions";
+#summary {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 1;
+}
+
+#questions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  grid-column: span 2;
+}
+
+#characters {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  grid-column: span 3;
+}
+
+table{
+  display: flex;
+  justify-content: center;
+}
+
+#game-actions {
+  display: flex;
+  justify-content: space-around;
+  grid-column: span 3;
 }
 
 .main-button {
@@ -168,15 +163,6 @@ header {
   font-size: 16px;
 }
 
-table {
-  display: flex;
-  justify-content: center;
-}
-
-h1 {
-  font-size: 50px;
-  color: white;
-}
 
 .modal{
   position: fixed;
@@ -207,3 +193,4 @@ h1 {
   color: white;
   text-align: right;
 }
+

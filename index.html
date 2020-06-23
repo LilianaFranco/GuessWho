@@ -1,29 +1,26 @@
-
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Guess Who</title>
-  <meta name="Guess Who Game" content="Welcome to Guess Who">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<meta charset="utf-8">
+	<title>Guess Who</title>
+	<meta name="Guess Who Game" content="Welcome to Guess Who">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 </head>
 
 <body>
 
-<div class="content-index">
+	<header>
+		<h1>Guess Who?</h1>
+		<img src="images/GuessWho.png">
+	</header>
 
-	<div class="item-header">
-		<header >
-			<h1>Guess Who?</h1>
-			<img src="images/GuessWho.png">
-		</header>
-	</div>
-
-	<div class="item-form">
-			<form id="player-info">
+	<div class="index-page">
+		<div class="main-page" id="enroll-page">
+			<form class="cell" id="player-info">
 				<section class="section-index">
 					<label>What is your name?</label>
 					<input type="text" name="name">
@@ -33,16 +30,90 @@
 					<label>What is your email?</label>
 					<input type="text" name="email">
 				</section>
-				
+
 				<section class="section-index"></section>
-				<button id="start" class="main-button" type="button">Start</button>	
-			</section>
+				<button id="start" class="main-button" type="button">Start</button>
+				</section>
 			</form>
+		</div>
+
 	</div>
 
-</div>
+	<div class="game-page">
+		<div class="game">
+			<div class="cell" id="welcome">
+				<h2>Hello,</h2>
+				<h2 id="user-name">Name</h2>
+				<button id="change-player" class="regular-button">Change player</button>
+			</div>
 
-<script src="./index.js"></script>
+			<div class="cell" id="summary">
+				<div>
+					<span>Total games:</span>
+					<span>0</span>
+				</div>
+				<div>
+					<span>Win games:</span>
+					<span>0</span>
+				</div>
+				<div>
+					<span>Lost games:</span>
+					<span>0</span>
+				</div>
+			</div>
+
+			<div class="cell" id="questions">
+				<div id="dropdown">Type of Feature</div>
+				<div id="dropdown">Feature</div>
+				<button class="regular-button">Ask!</button>
+			</div>
+
+			<div class="cell">
+				<span id="game-answer">Answer</span>
+				</section>
+			</div>
+
+			<div class="cell" id="characters">
+				<table>
+					<tr>
+						<td>character 1</td>
+						<td>character 2</td>
+						<td>character 3</td>
+					</tr>
+					<tr>
+						<td>character 4</td>
+						<td>character 5</td>
+						<td>character 6</td>
+					</tr>
+					<tr>
+						<td>character 7</td>
+						<td>character 8</td>
+						<td>character 9</td>
+				</table>
+			</div>
+
+			<div class="cell" id="game-actions">
+				<button class="main-button" id="guess">Guess</button>
+				<button class="main-button">End Game</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="modal">
+		<div class="close" id="close">x</div>
+		<div class="modal-content">
+			<span>Feature</span>
+			<button class="regular-button">Try!</button>
+			<span>Answer</span>
+			<span>Message</span>
+		</div>
+
+	</div>
+
+
+
+	<script src="./index.js"></script>
 
 </body>
 
